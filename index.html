@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StudyBuddy10 | Class 10 Study Hub</title>
+<meta name="description" content="Class 10 students ke liye Notes, MCQs, Maths, Science, English aur calculators.">
+<style>
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f6f8fc;color:#172033}
+a{text-decoration:none;color:inherit}.top{background:#fff;border-bottom:1px solid #e7eaf0;position:sticky;top:0;z-index:20}.nav{max-width:1150px;margin:auto;padding:14px 18px;display:flex;align-items:center;justify-content:space-between}.brand{font-weight:800;font-size:26px}.navlinks{display:flex;gap:18px;color:#44506a;font-weight:600}.menu{display:none;background:transparent;border:0;font-size:28px;cursor:pointer}.hero{background:linear-gradient(135deg,#4f46e5,#7c3aed);color:#fff}.heroIn{max-width:1150px;margin:auto;padding:58px 18px}.hero h1{font-size:44px;max-width:700px;margin:0 0 12px}.hero p{font-size:18px;line-height:1.6;max-width:700px}.search{display:flex;max-width:540px;gap:10px;margin-top:20px}.search input{flex:1;padding:14px 15px;border:1px solid rgba(255,255,255,.3);border-radius:10px;font-size:16px;background:#fff;color:#172033}.search button,.btn{padding:12px 18px;border:0;border-radius:10px;background:#fbbf24;color:#1f2937;font-weight:700;cursor:pointer}.wrap{max-width:1150px;margin:auto;padding:34px 18px}.title{font-size:27px;margin:0 0 17px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.card{background:#fff;border:1px solid #e5e8ef;border-radius:16px;padding:22px;cursor:pointer;box-shadow:0 4px 15px rgba(31,41,55,.04);transition:.2s}.card:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(31,41,55,.08)}.emoji{font-size:30px;display:block;margin-bottom:8px}.muted{color:#5f6f8f;line-height:1.6}.badge{display:inline-block;background:#eef2ff;color:#4338ca; padding:7px 10px;border-radius:999px;font-size:12px;font-weight:700;margin-top:10px}.section{margin-top:35px}.feature{display:grid;grid-template-columns:repeat(2,1fr);gap:17px}.box{background:#fff;border:1px solid #e5e8ef;border-radius:16px;padding:22px}.box h3{margin-top:0}.list{padding-left:18px;line-height:1.8}.panel{display:none;background:#fff;border:1px solid #e5e8ef;border-radius:16px;padding:24px;margin-top:22px}.panel.show{display:block}.back{border:0;background:#eef2ff;color:#4338ca;padding:9px 13px;border-radius:9px;cursor:pointer;font-weight:700}.chapter{background:#f8fafc;border:1px solid #edf2f7;border-radius:12px;padding:14px 15px;margin:12px 0;line-height:1.7}.quizQ{border:1px solid #e5e8ef;border-radius:11px;padding:15px;margin:12px 0}.option{display:block;width:100%;text-align:left;margin:7px 0;padding:11px;border:1px solid #ddd;background:#fff;border-radius:9px;cursor:pointer}.score{margin-top:18px;font-weight:700;font-size:18px}.calc{max-width:520px}.calc label{display:block;font-weight:700;margin-top:10px}.calc input{width:100%;padding:12px;border:1px solid #d8dce5;border-radius:8px;margin-top:6px}.result{margin-top:15px;font-weight:700;color:#0f172a}.footer{margin-top:35px;background:#111827;color:#d1d5db;text-align:center;padding:28px 18px;font-size:13px}
+@media(max-width:750px){.navlinks{display:none}.menu{display:block}.hero h1{font-size:33px}.grid,.feature{grid-template-columns:1fr}.heroIn{padding:45px 18px}}
+</style>
+</head>
+<body>
+<header class="top"><div class="nav"><div class="brand">📚 StudyBuddy10</div><nav class="navlinks"><a href="#subjects">Subjects</a><a href="#tools">Tools</a><a href="#about">About</a></nav><button class="menu" aria-label="Menu">☰</button></div></header>
+
+<section class="hero"><div class="heroIn">
+<h1>Class 10 ki padhai, ab easy! 🚀</h1>
+<p>Easy notes, chapter-wise practice, MCQs, formulas aur useful calculators — ek hi jagah.</p>
+<div class="search"><input id="search" placeholder="Search: Science, Maths, MCQ..."><button onclick="searchSite()">Search</button></div>
+</div></section>
+
+<main class="wrap">
+<section id="subjects"><h2 class="title">📖 Class 10 Study Hub</h2><div class="grid">
+<div class="card" onclick="openPanel('notes')"><span class="emoji">📚</span><h3>Notes</h3><p class="muted">Chapter-wise quick revision notes.</p><span class="badge">Open Notes</span></div>
+<div class="card" onclick="openPanel('mcq')"><span class="emoji">✅</span><h3>MCQ Practice</h3><p class="muted">Questions solve karo aur score dekho.</p><span class="badge">Start Quiz</span></div>
+<div class="card" onclick="openPanel('maths')"><span class="emoji">➗</span><h3>Maths</h3><p class="muted">Important formulas and topics.</p><span class="badge">View Formulas</span></div>
+<div class="card" onclick="openPanel('science')"><span class="emoji">🔬</span><h3>Science</h3><p class="muted">Physics, Chemistry aur Biology.</p><span class="badge">View Topics</span></div>
+<div class="card" onclick="openPanel('english')"><span class="emoji">📘</span><h3>English</h3><p class="muted">Grammar, writing aur revision.</p><span class="badge">Learn English</span></div>
+<div class="card" onclick="openPanel('apps')"><span class="emoji">📝</span><h3>Applications</h3><p class="muted">School applications ke easy formats.</p><span class="badge">View Formats</span></div>
+</div></section>
+
+<section class="section" id="tools"><h2 class="title">🧮 Student Tools</h2><div class="feature">
+<div class="box"><h3>Percentage Calculator</h3><p class="muted">Apne marks ki percentage instantly nikalo.</p><button class="btn" onclick="openPanel('calculator')">Open Calculator</button></div>
+<div class="box"><h3>🎯 Quick Revision</h3><p class="muted">Roz thoda practice karo: Notes → MCQs → Mistakes revise.</p></div>
+</div></section>
+
+<div id="notes" class="panel"><button class="back" onclick="hidePanels()">← Back</button><h2>📚 Class 10 Notes</h2>
+<div class="chapter"><b>Science — Life Processes</b><p class="muted">Nutrition, respiration, transportation aur excretion ke basic concepts.</p></div>
+<div class="chapter"><b>Science — Electricity</b><p class="muted">Current, potential difference, resistance aur Ohm's law.</p></div>
+<div class="chapter"><b>Maths — Real Numbers</b><p class="muted">Euclid's division algorithm, HCF/LCM aur irrational numbers.</p></div>
+<div class="chapter"><b>English — Grammar</b><p class="muted">Tenses, modals, subject-verb agreement aur reported speech.</p></div>
+</div>
+
+<div id="mcq" class="panel"><button class="back" onclick="hidePanels()">← Back</button><h2>✅ MCQ Practice</h2><div id="quiz"></div><button class="btn" onclick="checkQuiz()">Submit Quiz</button><div id="score" class="score"></div></div>
+
+<div id="maths" class="panel"><button class="back" onclick="hidePanels()">← Back</button><h2>➗ Important Maths Formulas</h2>
+<div class="chapter"><b>Quadratic Equation:</b><br>x = (-b ± √(b² − 4ac)) / 2a</div>
+<div class="chapter"><b>Arithmetic Progression:</b><br>aₙ = a + (n − 1)d</div>
+<div class="chapter"><b>Distance Formula:</b><br>√[(x₂ − x₁)² + (y₂ − y₁)²]</div>
+<div class="chapter"><b>Probability:</b><br>P(E) = Favourable outcomes / Total outcomes</div>
+</div>
+
+<div id="science" class="panel"><button class="back" onclick="hidePanels()">← Back</button><h2>🔬 Science Quick Revision</h2>
+<div class="chapter"><b>Life Processes:</b> Nutrition, respiration, transportation and excretion.</div>
+<div class="chapter"><b>Electricity:</b> Ohm's law: V = IR. Electrical power: P = VI.</div>
+<div class="chapter"><b>Light:</b> Reflection, refraction, mirrors, lenses and ray diagrams.</div>
+</div>
+
+<div id="english" class="panel"><button class="back" onclick="hidePanels()">← Back</button><h2>📘 English</h2>
+<div class="chapter"><b>Tenses:</b> Present, Past and Future with their forms.</div>
+<div class="chapter"><b>Writing:</b> Applications, letters and analytical writing practice.</div>
+<div class="chapter"><b>Grammar:</b> Modals, reported speech and subject-verb agreement.</div>
+</div>
+
+<div id="apps" class="panel"><button class="back" onclick="hidePanels()">← Back</button><h2>📝 School Applications</h2>
+<div class="chapter"><b>Leave Application</b><p>Respected Sir/Madam, I request you to kindly grant me leave due to personal reasons. I shall be grateful to you.</p></div>
+<div class="chapter"><b>Fee Concession Application</b><p>Respected Sir/Madam, I request you to kindly consider my application for fee concession. I shall be thankful to you.</p></div>
+</div>
+
+<div id="calculator" class="panel"><button class="back" onclick="hidePanels()">← Back</button><h2>🧮 Percentage Calculator</h2><div class="calc">
+<label>Obtained Marks</label><input id="obt" type="number" min="0" placeholder="Example: 420">
+<label>Total Marks</label><input id="total" type="number" min="1" placeholder="Example: 500">
+<br><button class="btn" style="margin-top:12px" onclick="calculate()">Calculate</button><div id="calcResult" class="result"></div>
+</div></div>
+
+<section class="section" id="about"><div class="box"><h2>🎓 About StudyBuddy10</h2><p class="muted">StudyBuddy10 ek student-friendly study project hai. Iska goal simple language mein revision aur practice easy banana hai. Isme Class 10 ke important subjects ko short aur practical way mein cover kiya gaya hai.</p></div></section>
+</main>
+
+<footer class="footer"><b>📚 StudyBuddy10</b><p>© 2026 StudyBuddy10 • Educational project</p><p>Content ko gradually expand kiya jayega.</p></footer>
+
+<script>
+const qs=[
+{q:"Photosynthesis ke dauran kaunsi gas release hoti hai?",o:["Oxygen","Nitrogen","Hydrogen","Carbon monoxide"],a:0},
+{q:"√144 ka value kya hai?",o:["10","11","12","14"],a:2},
+{q:"Ohm's law kya hai?",o:["V = IR","P = mgh","F = ma","P = VI"],a:0},
+{q:"AP ka nth term formula kya hai?",o:["a+n+d","a+(n−1)d","n(a+d)","a−nd"],a:1},
+{q:"Human body mein urine formation mainly kis organ mein hoti hai?",o:["Heart","Kidney","Lung","Stomach"],a:1}
+];
+function openPanel(id){hidePanels();let p=document.getElementById(id);p.classList.add('show');p.scrollIntoView({behavior:'smooth',block:'start'});if(id==='mcq')loadQuiz()}
+function hidePanels(){document.querySelectorAll('.panel').forEach(p=>p.classList.remove('show'))}
+function loadQuiz(){document.getElementById('quiz').innerHTML=qs.map((x,i)=>`<div class="quizQ"><b>${i+1}. ${x.q}</b>${x.o.map((v,j)=>`<label class="option"><input type="radio" name="q${i}" value="${j}">${v}</label>`).join('')}</div>`).join('')}
+function checkQuiz(){let s=0;qs.forEach((x,i)=>{let r=document.querySelector('input[name="q'+i+'"]:checked');if(r&&+r.value===x.a)s++});document.getElementById('score').textContent='Your Score: '+s+'/'+qs.length}
+function calculate(){let a=Number(document.getElementById('obt').value),t=Number(document.getElementById('total').value),r=document.getElementById('calcResult');if(!t||a<0||a>t){r.textContent='Please enter valid marks.';return}r.textContent='Percentage: '+((a/t)*100).toFixed(2)+'%'}
+function searchSite(){let q=document.getElementById('search').value.toLowerCase().trim();if(!q){alert('Kuch search karo 🙂');return}if(q.includes('mcq')||q.includes('quiz'))openPanel('mcq');else if(q.includes('math')||q.includes('formula'))openPanel('maths');else if(q.includes('science')||q.includes('physics')||q.includes('chem')||q.includes('bio'))openPanel('science');else if(q.includes('english')||q.includes('grammar')||q.includes('writing'))openPanel('english');else if(q.includes('notes')||q.includes('chapter'))openPanel('notes');else if(q.includes('app')||q.includes('application'))openPanel('apps');else if(q.includes('calc')||q.includes('percentage'))openPanel('calculator');else alert('No matching topic found. Try: MCQ, Maths, Science, English, Notes, Calculator.')}
+</script>
+</body>
+</html>
