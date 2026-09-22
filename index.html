@@ -1,1 +1,940 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>StudyBuddy10 | Class 10 Study Hub</title>
+<meta name="description" content="Class 10 students ke liye Notes, MCQs, Maths, Science, English aur study tools.">
+
+<style>
+*{box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
+body{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  background:#f6f8fc;
+  color:#172033;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+.top{
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:rgba(255,255,255,.96);
+  border-bottom:1px solid #e7eaf1;
+  backdrop-filter:blur(12px);
+}
+
+.nav{
+  max-width:1200px;
+  margin:auto;
+  padding:15px 20px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.brand{
+  font-size:24px;
+  font-weight:900;
+}
+
+.brand span{
+  color:#635bff;
+}
+
+.navlinks{
+  display:flex;
+  gap:28px;
+  color:#566176;
+  font-weight:700;
+}
+
+.navlinks a:hover{
+  color:#635bff;
+}
+
+.menu{
+  display:none;
+  border:0;
+  background:none;
+  font-size:28px;
+  cursor:pointer;
+}
+
+.hero{
+  background:
+    radial-gradient(circle at 85% 15%,rgba(255,255,255,.2),transparent 30%),
+    linear-gradient(135deg,#4338ca,#6d28d9,#7c3aed);
+  color:white;
+}
+
+.heroIn{
+  max-width:1200px;
+  margin:auto;
+  padding:85px 20px 80px;
+}
+
+.tag{
+  display:inline-block;
+  padding:8px 14px;
+  border-radius:30px;
+  background:rgba(255,255,255,.15);
+  border:1px solid rgba(255,255,255,.25);
+  font-size:13px;
+  font-weight:bold;
+  margin-bottom:18px;
+}
+
+.hero h1{
+  max-width:780px;
+  font-size:54px;
+  line-height:1.08;
+  margin:0 0 20px;
+  letter-spacing:-1.5px;
+}
+
+.hero p{
+  max-width:700px;
+  font-size:19px;
+  line-height:1.7;
+  color:#eeeaff;
+}
+
+.buttons{
+  display:flex;
+  gap:12px;
+  margin-top:28px;
+  flex-wrap:wrap;
+}
+
+.btn{
+  border:0;
+  padding:14px 21px;
+  border-radius:12px;
+  font-weight:800;
+  cursor:pointer;
+  background:#fbbf24;
+  color:#241d00;
+}
+
+.btn2{
+  background:rgba(255,255,255,.14);
+  color:white;
+  border:1px solid rgba(255,255,255,.3);
+}
+
+.btn:hover{
+  transform:translateY(-2px);
+}
+
+.stats{
+  max-width:1100px;
+  margin:-30px auto 0;
+  position:relative;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+  padding:0 20px;
+}
+
+.stat{
+  background:white;
+  padding:22px;
+  text-align:center;
+  border-radius:16px;
+  box-shadow:0 10px 30px rgba(20,30,60,.09);
+}
+
+.stat strong{
+  display:block;
+  font-size:26px;
+  color:#4f46e5;
+}
+
+.wrap{
+  max-width:1200px;
+  margin:auto;
+  padding:65px 20px;
+}
+
+.title{
+  font-size:32px;
+  margin:0 0 8px;
+}
+
+.subtitle{
+  color:#68758d;
+  margin:0 0 30px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.card{
+  background:white;
+  border:1px solid #e5e9f1;
+  border-radius:20px;
+  padding:26px;
+  box-shadow:0 8px 25px rgba(25,35,60,.05);
+  transition:.25s;
+  cursor:pointer;
+}
+
+.card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 18px 38px rgba(25,35,60,.12);
+}
+
+.icon{
+  width:55px;
+  height:55px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#f0efff;
+  border-radius:15px;
+  font-size:29px;
+  margin-bottom:17px;
+}
+
+.card h3{
+  margin:0 0 8px;
+  font-size:21px;
+}
+
+.card p{
+  color:#68758d;
+  line-height:1.6;
+}
+
+.badge{
+  display:inline-block;
+  background:#eeedff;
+  color:#5146d8;
+  padding:7px 11px;
+  border-radius:20px;
+  font-size:12px;
+  font-weight:bold;
+}
+
+.feature{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:20px;
+}
+
+.box{
+  background:white;
+  border:1px solid #e5e9f1;
+  border-radius:20px;
+  padding:28px;
+  box-shadow:0 8px 25px rgba(25,35,60,.04);
+}
+
+.box h3{
+  margin-top:0;
+  font-size:22px;
+}
+
+.box p{
+  color:#68758d;
+  line-height:1.7;
+}
+
+.panel{
+  display:none;
+  background:white;
+  border:1px solid #e5e9f1;
+  border-radius:20px;
+  padding:28px;
+  margin-top:25px;
+  box-shadow:0 10px 30px rgba(25,35,60,.06);
+}
+
+.panel.show{
+  display:block;
+}
+
+.back{
+  border:0;
+  background:#eeedff;
+  color:#5146d8;
+  padding:10px 14px;
+  border-radius:10px;
+  cursor:pointer;
+  font-weight:bold;
+}
+
+.chapter{
+  background:#f8f9fc;
+  border:1px solid #e8ebf2;
+  padding:17px;
+  border-radius:13px;
+  margin:12px 0;
+  line-height:1.7;
+}
+
+.quizQ{
+  border:1px solid #e3e7ef;
+  border-radius:14px;
+  padding:18px;
+  margin:14px 0;
+}
+
+.option{
+  width:100%;
+  text-align:left;
+  border:1px solid #dfe3eb;
+  background:white;
+  padding:12px;
+  border-radius:10px;
+  margin:7px 0;
+  cursor:pointer;
+}
+
+.option:hover{
+  background:#f5f3ff;
+  border-color:#aaa2ff;
+}
+
+.calc{
+  max-width:500px;
+}
+
+.calc label{
+  display:block;
+  font-weight:bold;
+  margin-top:15px;
+}
+
+.calc input{
+  width:100%;
+  padding:13px;
+  border:1px solid #d8dde7;
+  border-radius:10px;
+  margin-top:7px;
+  font-size:16px;
+}
+
+.result{
+  margin-top:18px;
+  font-size:19px;
+  font-weight:bold;
+}
+
+.footer{
+  background:#111827;
+  color:#cbd5e1;
+  text-align:center;
+  padding:42px 20px;
+}
+
+.footer b{
+  color:white;
+  font-size:19px;
+}
+
+.mobileOpen{
+  display:flex !important;
+  position:absolute;
+  top:70px;
+  left:15px;
+  right:15px;
+  flex-direction:column;
+  gap:0;
+  background:white;
+  padding:10px;
+  border-radius:14px;
+  box-shadow:0 12px 30px rgba(0,0,0,.12);
+  border:1px solid #e5e9f1;
+}
+
+.mobileOpen a{
+  padding:13px;
+  border-radius:9px;
+}
+
+.mobileOpen a:hover{
+  background:#f0efff;
+}
+
+@media(max-width:800px){
+
+  .navlinks{
+    display:none;
+  }
+
+  .menu{
+    display:block;
+  }
+
+  .heroIn{
+    padding:65px 20px;
+  }
+
+  .hero h1{
+    font-size:39px;
+  }
+
+  .grid,
+  .feature{
+    grid-template-columns:1fr;
+  }
+
+  .stats{
+    grid-template-columns:1fr;
+    margin-top:20px;
+  }
+}
+
+@media(max-width:520px){
+
+  .hero h1{
+    font-size:32px;
+  }
+
+  .hero p{
+    font-size:17px;
+  }
+
+  .title{
+    font-size:27px;
+  }
+
+  .wrap{
+    padding:45px 16px;
+  }
+
+  .card,
+  .box,
+  .panel{
+    padding:21px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header class="top">
+
+<div class="nav">
+
+<div class="brand">
+📚 Study<span>Buddy10</span>
+</div>
+
+<nav class="navlinks">
+
+<a href="#subjects">Subjects</a>
+<a href="#tools">Tools</a>
+<a href="#about">About</a>
+
+</nav>
+
+<button class="menu" onclick="toggleMenu()">☰</button>
+
+</div>
+
+</header>
+
+
+<section class="hero">
+
+<div class="heroIn">
+
+<div class="tag">🎓 CLASS 10 STUDY HUB</div>
+
+<h1>
+Class 10 ki padhai,
+ab simple aur smart! 🚀
+</h1>
+
+<p>
+Notes padho, MCQs practice karo, formulas revise karo
+aur apni preparation ko better banao — sab kuch ek hi jagah.
+</p>
+
+<div class="buttons">
+
+<a href="#subjects" class="btn">
+Explore Subjects →
+</a>
+
+<a href="#tools" class="btn btn2">
+Student Tools
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="stats">
+
+<div class="stat">
+<strong>6+</strong>
+Subjects & Resources
+</div>
+
+<div class="stat">
+<strong>MCQs</strong>
+Practice Questions
+</div>
+
+<div class="stat">
+<strong>24×7</strong>
+Study Anytime
+</div>
+
+</section>
+
+
+<section class="wrap" id="subjects">
+
+<h2 class="title">📚 Explore Subjects</h2>
+
+<p class="subtitle">
+Apne subject ko choose karo aur learning start karo.
+</p>
+
+<div class="grid">
+
+<div class="card" onclick="openPanel('notes')">
+<div class="icon">📝</div>
+<h3>Notes</h3>
+<p>Important chapters aur quick revision notes.</p>
+<span class="badge">Study Notes</span>
+</div>
+
+
+<div class="card" onclick="openPanel('mcq')">
+<div class="icon">🎯</div>
+<h3>MCQ Practice</h3>
+<p>Important questions solve karo aur score check karo.</p>
+<span class="badge">Practice</span>
+</div>
+
+
+<div class="card" onclick="openPanel('maths')">
+<div class="icon">➗</div>
+<h3>Mathematics</h3>
+<p>Important formulas aur quick revision.</p>
+<span class="badge">Maths</span>
+</div>
+
+
+<div class="card" onclick="openPanel('science')">
+<div class="icon">🔬</div>
+<h3>Science</h3>
+<p>Physics, Chemistry aur Biology revision.</p>
+<span class="badge">Science</span>
+</div>
+
+
+<div class="card" onclick="openPanel('english')">
+<div class="icon">📖</div>
+<h3>English</h3>
+<p>Grammar, writing aur important topics.</p>
+<span class="badge">English</span>
+</div>
+
+
+<div class="card" onclick="openPanel('applications')">
+<div class="icon">✍️</div>
+<h3>Applications</h3>
+<p>School applications aur useful formats.</p>
+<span class="badge">Writing</span>
+</div>
+
+</div>
+
+
+<div id="notes" class="panel">
+
+<button class="back" onclick="hidePanels()">← Back</button>
+
+<h2>📝 Class 10 Notes</h2>
+
+<div class="chapter">
+<b>Important Tip:</b>
+Har chapter ke important points ko short notes me revise karo.
+</div>
+
+<div class="chapter">
+<b>Study Strategy</b><br>
+Concept samjho → Examples dekho → Questions solve karo → Revision karo.
+</div>
+
+</div>
+
+
+<div id="mcq" class="panel">
+
+<button class="back" onclick="hidePanels()">← Back</button>
+
+<h2>🎯 MCQ Practice</h2>
+
+<div id="quiz"></div>
+
+<button class="btn" onclick="checkQuiz()">
+Check Score
+</button>
+
+<div id="score" class="result"></div>
+
+</div>
+
+
+<div id="maths" class="panel">
+
+<button class="back" onclick="hidePanels()">← Back</button>
+
+<h2>➗ Maths Quick Revision</h2>
+
+<div class="chapter">
+<b>Quadratic Equation:</b><br>
+ax² + bx + c = 0
+</div>
+
+<div class="chapter">
+<b>Arithmetic Progression:</b><br>
+aₙ = a + (n − 1)d
+</div>
+
+<div class="chapter">
+<b>Distance Formula:</b><br>
+√[(x₂−x₁)² + (y₂−y₁)²]
+</div>
+
+</div>
+
+
+<div id="science" class="panel">
+
+<button class="back" onclick="hidePanels()">← Back</button>
+
+<h2>🔬 Science Revision</h2>
+
+<div class="chapter">
+<b>Physics:</b> Light, Electricity, Magnetic Effects.
+</div>
+
+<div class="chapter">
+<b>Chemistry:</b> Chemical Reactions, Acids & Bases, Metals.
+</div>
+
+<div class="chapter">
+<b>Biology:</b> Life Processes, Reproduction, Heredity.
+</div>
+
+</div>
+
+
+<div id="english" class="panel">
+
+<button class="back" onclick="hidePanels()">← Back</button>
+
+<h2>📖 English</h2>
+
+<div class="chapter">
+<b>Writing:</b> Letter, Application, Article aur Analytical Paragraph.
+</div>
+
+<div class="chapter">
+<b>Grammar:</b> Tenses, Modals, Subject-Verb Agreement.
+</div>
+
+</div>
+
+
+<div id="applications" class="panel">
+
+<button class="back" onclick="hidePanels()">← Back</button>
+
+<h2>✍️ School Applications</h2>
+
+<div class="chapter">
+
+<b>Leave Application</b><br><br>
+
+To,<br>
+The Principal<br>
+My School<br><br>
+
+Subject: Application for leave<br><br>
+
+Respected Sir/Madam,<br>
+I kindly request you to grant me leave for the required period due to unavoidable reasons.
+<br><br>
+
+Thank you.
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="wrap" id="tools">
+
+<h2 class="title">🛠️ Student Tools</h2>
+
+<p class="subtitle">
+Padhai ko easier banane ke liye useful tools.
+</p>
+
+<div class="feature">
+
+<div class="box">
+
+<h3>📊 Percentage Calculator</h3>
+
+<p>
+Apne marks enter karo aur percentage instantly calculate karo.
+</p>
+
+<div class="calc">
+
+<label>Total Marks</label>
+<input id="total" type="number" placeholder="Example: 500">
+
+<label>Obtained Marks</label>
+<input id="obtained" type="number" placeholder="Example: 425">
+
+<br><br>
+
+<button class="btn" onclick="calculate()">
+Calculate
+</button>
+
+<div id="result" class="result"></div>
+
+</div>
+
+</div>
+
+
+<div class="box">
+
+<h3>⚡ Quick Revision</h3>
+
+<p>
+Exam se pehle important formulas, definitions aur key points ko
+short revision format me dekho.
+</p>
+
+<div class="chapter">
+✅ Read the concept<br>
+✅ Revise important formulas<br>
+✅ Practice MCQs<br>
+✅ Check your mistakes
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="wrap" id="about">
+
+<div class="box">
+
+<h2>💜 About StudyBuddy10</h2>
+
+<p>
+StudyBuddy10 ek simple student-friendly study hub hai jo
+Class 10 students ko Notes, MCQs, revision material aur
+useful study tools ek hi place par provide karta hai.
+</p>
+
+</div>
+
+</section>
+
+
+<footer class="footer">
+
+<b>📚 StudyBuddy10</b>
+
+<p>
+Learn • Practice • Revise • Improve 🚀
+</p>
+
+<p>
+© 2026 StudyBuddy10. Made for students.
+</p>
+
+</footer>
+
+
+<script>
+
+function toggleMenu(){
+
+const nav=document.querySelector(".navlinks");
+
+nav.classList.toggle("mobileOpen");
+
+}
+
+
+function openPanel(id){
+
+hidePanels();
+
+const panel=document.getElementById(id);
+
+if(panel){
+panel.classList.add("show");
+panel.scrollIntoView({
+behavior:"smooth",
+block:"start"
+});
+}
+
+}
+
+
+function hidePanels(){
+
+document.querySelectorAll(".panel").forEach(function(panel){
+
+panel.classList.remove("show");
+
+});
+
+}
+
+
+function calculate(){
+
+const total=Number(document.getElementById("total").value);
+
+const obtained=Number(document.getElementById("obtained").value);
+
+const result=document.getElementById("result");
+
+if(!total || total<=0 || obtained<0){
+
+result.innerHTML="⚠️ Please enter valid marks.";
+
+return;
+
+}
+
+if(obtained>total){
+
+result.innerHTML="⚠️ Obtained marks total se zyada nahi ho sakte.";
+
+return;
+
+}
+
+const percentage=(obtained/total)*100;
+
+result.innerHTML="🎉 Your Percentage: "+percentage.toFixed(2)+"%";
+
+}
+
+
+const questions=[
+
+{
+q:"1. Which number is a prime number?",
+options:["21","29","35","39"],
+answer:1
+},
+
+{
+q:"2. H₂O is the chemical formula of?",
+options:["Oxygen","Hydrogen","Water","Carbon"],
+answer:2
+},
+
+{
+q:"3. What is the SI unit of electric current?",
+options:["Volt","Watt","Ampere","Ohm"],
+answer:2
+}
+
+];
+
+
+function loadQuiz(){
+
+const quiz=document.getElementById("quiz");
+
+quiz.innerHTML="";
+
+questions.forEach(function(item,index){
+
+let html=
+'<div class="quizQ">'+
+'<b>'+item.q+'</b>';
+
+item.options.forEach(function(option,optIndex){
+
+html+=
+'<label class="option">'+
+'<input type="radio" name="q'+index+'" value="'+optIndex+'"> '+
+option+
+'</label>';
+
+});
+
+html+="</div>";
+
+quiz.innerHTML+=html;
+
+});
+
+}
+
+
+function checkQuiz(){
+
+let score=0;
+
+questions.forEach(function(item,index){
+
+const selected=
+document.querySelector('input[name="q'+index+'"]:checked');
+
+if(selected && Number(selected.value)===item.answer){
+
+score++;
+
+}
+
+});
+
+document.getElementById("score").innerHTML=
+"🏆 Your Score: "+score+" / "+questions.length;
+
+}
+
+
+loadQuiz();
+
+</script>
+
+</body>
+  </html>
