@@ -9,6 +9,45 @@
 
 <style>
 *{box-sizing:border-box}
+
+  body.dark{
+  background:#0f172a;
+  color:#e5e7eb;
+}
+
+body.dark .top{
+  background:#111827;
+  border-color:#263244;
+}
+
+body.dark .navlinks{
+  color:#cbd5e1;
+}
+
+body.dark .card,
+body.dark .box,
+body.dark .panel,
+body.dark .stat{
+  background:#1e293b;
+  border-color:#334155;
+  color:#e5e7eb;
+}
+
+body.dark .card p,
+body.dark .box p,
+body.dark .subtitle{
+  color:#cbd5e1;
+}
+
+body.dark .chapter{
+  background:#172033;
+  border-color:#334155;
+}
+
+body.dark .darkBtn{
+  background:#334155;
+  color:#fbbf24;
+}
 <style>
   .darkBtn{
   border:0;
@@ -946,6 +985,19 @@ document.getElementById("score").innerHTML=
 loadQuiz();
 
 </script>
+  function toggleDarkMode(){
+
+  document.body.classList.toggle("dark");
+
+  const button = document.querySelector(".darkBtn");
+
+  if(document.body.classList.contains("dark")){
+    button.innerHTML = "☀️";
+  }else{
+    button.innerHTML = "🌙";
+  }
+
+}
 
 </body>
   </html>
